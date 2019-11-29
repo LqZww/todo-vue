@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background: url(./background.png);
+    background-size: 100%;
+}
+
+#app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list {
+    box-shadow: 5px -5px 12px 2px rgba(128, 128, 128, 1);
+    border-radius: 10px;
+    border: 1px solid grey;
+    width: 400px;
+    height: 68%;
+    overflow: auto;
+}
+
+.add {
+    width: 420px;
+    height: 12%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(217, 241, 204);
+    border-radius: 4px;
+}
+
+.add>input {
+    width: 60%;
+    height: 60%;
+    margin-right: 10px;
+    font-size: 16px;
+
+}
+
+.add>button {
+    width: 20%;
+    height: 60%;
+}
+
+.todo {
+    border: 1px solid grey;
+    border-radius: 6px;
+    margin: 16px 12px;
+    padding: 16px;
+    background: rgb(217, 241, 204);
+}
+
+.done {
+    border: 1px solid grey;
+    margin: 16px 12px;
+    padding: 16px;
+    border-radius: 6px;
+    background: rgb(217, 241, 204);
+}
+
+li {
+    margin: 14px 30px;
+}
+
+li>button {
+    padding: 2px;
+}

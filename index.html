@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="list">
+            <div class="todo">
+                <h2>Todo</h2>
+                <ul v-for="(item,index) in list" v-if="!item.done">
+                    <li>
+                        <input type="checkbox" v-model="item.done">
+                        {{item.todo}}
+                        <button @click="deletetodo(index)">Delete</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="done">
+                <h2>Done</h2>
+                <ul v-for="item in list" v-if="item.done">
+                    <li>
+                        <input type="checkbox" v-model="item.done">
+                        {{item.todo}}
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="add">
+            <input type="text" v-model="todo">
+            <button @click="addToDo()">添加</button>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
