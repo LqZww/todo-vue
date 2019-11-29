@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo-demo2</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>记事本</h1>
+        </header>
+
+        <section>
+            <input @keyup.enter="add" v-model="inputValue" type="text" placeholder="请输入！">
+            <ul>
+                <li v-for="(item,index) in list">
+                    <div class="content clearfix">
+                        <span>{{index+1}}.</span>
+                        <label>{{item}}</label>
+                        <button @click="remove(index)">delete</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <footer class="clearfix">
+            <span v-if="list.length !=0">
+                总数：{{list.length}}
+            </span>
+            <button v-if="list.length !=0" @click="clear">clear</button>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
